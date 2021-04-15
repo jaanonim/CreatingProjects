@@ -31,5 +31,6 @@ def createPython(path, name):
         print(f"{name} created.")
         os.system("code .")
 
-    except:
+    except Exception as e:
         print(f"Cannot create project {name}.")
+        print(e)

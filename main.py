@@ -1,11 +1,12 @@
 import os
 import sys
 
-from data import PATH
+from data import LOCATION, PATH
 from python import createPython
 from web import createWeb
 
 if __name__ == "__main__":
+    os.chdir(LOCATION)
     try:
         type_ = str(sys.argv[2])
         name = str(sys.argv[3])
