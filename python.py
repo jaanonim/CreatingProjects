@@ -18,7 +18,7 @@ def createPython(path, name):
 
         f = open(".vscode/settings.json", "w")
         f.write(
-            '{ "python.pythonPath": '
+            '{ "python.pythonPath": "'
             + python_path
             + '", "python.formatting.provider": "black"} '
         )
