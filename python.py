@@ -11,7 +11,7 @@ def createPython(path, name):
         os.mkdir(".vscode")
         os.system("git init")
         os.system("py -m venv env")
-        os.system(f"{python_path} -m pip install black")
+        os.system(f'"{python_path}" -m pip install black')
         os.system("type NUL > requirements.txt")
         os.system("type NUL > main.py")
         os.system(f"echo # {name} > README.md")
