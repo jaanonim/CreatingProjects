@@ -14,7 +14,7 @@ def loadTemplates():
 
 
 def createWeb(path, name):
-    _dir = path + "/" + name
+    _dir = path + "\\" + name
 
     try:
         html, css = loadTemplates()
@@ -37,5 +37,5 @@ def createWeb(path, name):
         print(f"{name} created.")
         os.system("code .")
 
-    except:
-        print(f"Cannot create project {name}.")
+    except Exception as e:
+        print(f"Cannot create project {name}. {e}")
