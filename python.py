@@ -13,8 +13,11 @@ def createPython(path, name):
         os.system("py -m venv env")
         os.system(f'"{python_path}" -m pip install black')
         os.system("type NUL > requirements.txt")
-        os.system("type NUL > main.py")
         os.system(f"echo # {name} > README.md")
+
+        f = open("main.py", "w")
+        f.write('\ndef main():\n\tpass\n\n\nif __name__ == "__main__":\n\tmain()')
+        f.close()
 
         f = open(".vscode/settings.json", "w")
         f.write(
@@ -25,7 +28,7 @@ def createPython(path, name):
         f.close()
 
         f = open(".gitignore", "w")
-        f.write("env\n.vscode")
+        f.write("env\n.vscode\n__pycache__")
         f.close()
 
         print(f"{name} created.")
