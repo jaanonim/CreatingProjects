@@ -1,2 +1,2 @@
 @echo off
-py E:\Mateusz\dodatki\PROGRAMOWANIE\python\CreatingProjects\main.py %cd%
+py C:\Data\Programowanie\python\CreatingProjects\main.py %cd%
